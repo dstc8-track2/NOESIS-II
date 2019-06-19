@@ -158,8 +158,8 @@ Information regarding the submission will be released later in the development p
 
 ### Organizers ###
 
-[Chulaka Gunasekara](https://researcher.watson.ibm.com/researcher/view.php?person=ibm-chulaka.gunasekara), [Luis Lastras](https://researcher.watson.ibm.com/researcher/view.php?person=us-lastrasl),  – IBM Research AI <br>
-[Jonathan K. Kummerfeld](http://www.jkk.name), [Walter Lasecki](https://web.eecs.umich.edu/~wlasecki/),  – University of Michigan
+[Chulaka Gunasekara](https://researcher.watson.ibm.com/researcher/view.php?person=ibm-chulaka.gunasekara), [Luis Lastras](https://researcher.watson.ibm.com/researcher/view.php?person=us-lastrasl)  – IBM Research AI <br>
+[Jonathan K. Kummerfeld](http://www.jkk.name), [Walter Lasecki](https://web.eecs.umich.edu/~wlasecki/)  – University of Michigan
 
 
 
