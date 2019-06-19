@@ -15,6 +15,17 @@ This challenge is offered with two goal oriented dialog datasets, used in 4 subt
 ### Ubuntu dataset ###
 A new set of disentangled Ubuntu IRC dialogs will be provided in this challenge. The dataset consists of multi party conversations extracted from the Ubuntu IRC channel. A typical dialog starts with a question that was asked by participant_1, and then other partipants responds with either an answer or follow-up questions that then lead to a back-and-forth conversation. In this challenge, the context of each dialog contains more than 3 turns which occurred between the participants and the next turn in the conversation should be selected from the given set of candidate utterances. Relevant external information of the form of Linux manual pages and Ubuntu discussion forums is also provided.
 
+If you use the Ubuntu data, please also cite the paper in which we describe its creation:
+```
+@InProceedings{acl19disentangle,
+  author    = {Jonathan K. Kummerfeld and Sai R. Gouravajhala and Joseph Peper and Vignesh Athreya and Chulaka Gunasekara and Jatin Ganhotra and Siva Sankalp Patel and Lazaros Polymenakos and Walter S. Lasecki},
+  title     = {A Large-Scale Corpus for Conversation Disentanglement},
+  booktitle = {Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  month     = {July},
+  year      = {2019},
+}
+```
+
 ### Advising dataset ###
 This dataset contains two party dialogs that simulate a discussion between a student and an academic advisor. The purpose of the dialogs is to guide the student to pick courses that fit not only their curriculum, but also personal preferences about time, difficulty, areas of interest, etc. These conversations were collected by having students at the University of Michigan act as the two roles using provided personas. Structured information in the form of a database of course information will be provided, as well as the personas (though at test time only information available to the advisor will be provided, i.e. not the explicit student preferences). The data also includes paraphrases of the sentences and of the target responses.
 
