@@ -127,7 +127,7 @@ The `.raw.txt` file is a sample from the IRC log from that day. The `.ascii.txt`
 
 Note:
 - Messages are counted starting at 0 and each one is a single line in the logs.
-- System messages (e.g. “=== blah [blah@blah.net] has joined #ubuntu”) are counted and annotated.
+- System messages (e.g. “=== blah has joined #ubuntu”) are counted and annotated.
 - A message can be linked to multiple messages both before it and after it. Each link is given separately.
 - There are no links where both values are less than 1000. In other words, the annotations specify what each message is a response to, starting from message 1,000.
 
