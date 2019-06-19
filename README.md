@@ -142,7 +142,11 @@ Note:
 - A message can be linked to multiple messages both before it and after it. Each link is given separately.
 - There are no links where both values are less than 1000. In other words, the annotations specify what each message is a response to, starting from message 1,000.
 
+### Baselines ###
+Baselines for some subtasks will be available soon.
+
 ### Evaluation ###
+
 For subtask 1 and 2, we will expect you to return a set of 100 candidates and a probability distribution over those 100 choices. As competition metrics we will compute range of scores, including recall@k, MRR(mean reciprocal rank). The
 final metric will be the average of MRR and recall@10. 
 
@@ -155,6 +159,14 @@ score over complete threads and several clustering metrics (Variation of Informa
 ### Submission ###
 
 Information regarding the submission will be released later in the development period.
+
+### Tentative Timeline ###
+
+- Development Phase: Jun 17 - Sep 22, 2019 (14 weeks)
+- Evaluation Phase: Sep 23 - Oct 6, 2019 (2 weeks)
+- Objective Evaluation: Oct 7 - Oct 20, 2019
+- Paper Submission: TBA
+- DSTC8 Workshop: TBA
 
 ### Organizers ###
 
