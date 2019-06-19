@@ -134,7 +134,9 @@ Note:
 ### Evaluation ###
 For subtask 1 and 2, we will expect you to return a set of 100 candidates and a probability distribution over those 100 choices. As competition metrics we will compute range of scores, including recall@k, MRR(mean reciprocal rank). The
 final metric will be the average of MRR and recall@10. 
+
 For subtask 3, the participants are expected to return the success or a failiure of the conversation and utterance in which the success is indicated. The participants will be evaluated by the accuracy of identifying success and failure. 
+
 The participants of the subtask 4 will be evaluated based on Precision, recall, and F-
 score over complete threads and several clustering metrics (Variation of Information, Adjusted Rand Index, and Adjusted Mutual Information).
 
