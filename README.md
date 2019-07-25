@@ -29,6 +29,8 @@ If you use the Ubuntu data, please also cite the paper in which we describe its 
 ### Advising dataset ###
 This dataset contains two party dialogs that simulate a discussion between a student and an academic advisor. The purpose of the dialogs is to guide the student to pick courses that fit not only their curriculum, but also personal preferences about time, difficulty, areas of interest, etc. These conversations were collected by having students at the University of Michigan act as the two roles using provided personas. Structured information in the form of a database of course information will be provided, as well as the personas (though at test time only information available to the advisor will be provided, i.e. not the explicit student preferences). The data also includes paraphrases of the sentences and of the target responses.
 
+Note: the Advising data is considerably smaller than the Ubuntu data, but more focused in topic.
+
 ### Sub-tasks ###
 We are considered several subtasks that have similar structure, but vary in the output space and available context. In the table below, [x] indicates that the subtask is evaluated on the marked dataset.
 
@@ -109,6 +111,13 @@ Each dialog contains in training, validation and test datasets follows the JSON 
 ```
 The field `messages-so-far` contains the context of the dialog and `options-for-next` contains the candidates to select the next utterance from. The correct next utterance is given in the field `options-for-correct-answers`. The field `scenario` refers to the subtask.
 
+For each dialog in advising dataset, we provide a profile that contains information used during the creation of the dialog. It has the following fields:
+
+- Aggregated - contains student preferences, with each field matching up with a field in the course information file.
+- Courses - contains two lists, first is a list of courses this student has taken (“Prior”) and second is a list of suggestions that the advisor had access to (“Suggested”).
+- Term - specifies the simulated year and semester for the conversation
+- Standing - specifies how far through their degree the student is.
+
 For subtask 3, the information regarding the success of a conversation is given in the field similar to the following where the `label` indicates whether the conversation is a success or not and `position` indicates the utterance where the conversation is accepted.
 ```
 "success-labels": [
@@ -119,12 +128,10 @@ For subtask 3, the information regarding the success of a conversation is given 
         ]
 ```
 
-For each dialog in advising dataset, we provide a profile that contains information used during the creation of the dialog. It has the following fields:
-
-- Aggregated - contains student preferences, with each field matching up with a field in the course information file.
-- Courses - contains two lists, first is a list of courses this student has taken (“Prior”) and second is a list of suggestions that the advisor had access to (“Suggested”).
-- Term - specifies the simulated year and semester for the conversation
-- Standing - specifies how far through their degree the student is.
+The label can be 'Accept', 'Reject', or 'No Decision Yet'.
+There can be multiple labels, to cover cases where the student accepts/rejects multiple advisor suggestions.
+If the value is 'No Decision Yet' then the position will be -1.
+'No Decision Yet' appears in the task-1.advising.train.json file, and the dev and test files, but not in the task-1.advising.train.complete.json file (which contains complete conversations rather than partial ones).
 
 #### Subtask 4 ####
 This data is not in the same format as the other subtasks. There are train and dev folders containing a set of files like this:
