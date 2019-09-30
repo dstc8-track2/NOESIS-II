@@ -238,7 +238,7 @@ Note, we will ignore all numbers below 1000 and if any numbers 1000 or above are
 
 
 
-### Tentative Timeline ###
+### Timeline ###
 
 - Development Phase: Jun 17 - Sep 22, 2019 (14 weeks)
 - Test data out on: Sep 23, 2019
