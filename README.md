@@ -167,9 +167,9 @@ score over complete threads and several clustering metrics (Variation of Informa
 
 Your submissions should be emailed to `chulaka.gunasekara@ibm.com`, with the subject line `DSTC8_Track2_Submission`. The results should be submitted from an email address that is registered for Track 2.
 
-You need to submit a single zipped directory containing the result files for each of the subtasks that you need to be evaluated on. The files should be named in the following format. `<dataset>_subtask_<subtask_number>.json`
+You need to submit a single zipped directory containing the result files for each of the subtasks that you need to be evaluated on. The files should be named `<dataset>_subtask_<subtask_number>.json` for subtasks 1-3 and `Ubuntu_subtask_4.txt` for subtask 4. 
 
-The `<dataset>` should be replaced by either `Ubuntu` or `Advising`, and the `<subtask_number>` should be replaced by the subtask number(1-4). For example, the results file for subtask 1 on Ubuntu dataset should be named as `Ubuntu_subtask_1.json`
+For subtasks 1-3, the `<dataset>` should be replaced by either `Ubuntu` or `Advising`, and the `<subtask_number>` should be replaced by the subtask number(1-3). For example, the results file for subtask 1 on Ubuntu dataset should be named as `Ubuntu_subtask_1.json`
 
 Each results file for subtask 1 and 2 should follow the following json format.
 ```
@@ -211,6 +211,30 @@ The results file for subtask 3 should follow the following format.
 ]
 ```
 The value for the field `example-id` should contain the corresponding `example-id` of the test dataset. The `label` can be 'Accept', 'Reject', or 'No Decision Yet'. The `position` should be and integer which points to the utterance where the conversation is accepted or rejected. The If the value is 'No Decision Yet' then the position should be -1. 
+
+
+The results for subtask 4 should be a submitted by a single file `(Ubuntu_subtask_4.txt)` in the following format:
+
+```
+DATE: A B C...
+DATE: Q W E R T Y...
+...
+```
+
+Where each line describes one cluster for that date (where the date comes from the test input filename). For example, you could have:
+
+```
+2005-07-06 1000 1001 1002 1003
+2005-07-06 1004 1006
+2005-07-06 1005
+2005-07-06 1007 1008
+...
+2014-06-18 1000 1002
+2014-06-18 1001 1003 1004
+...
+```
+
+Note, we will ignore all numbers below 1000 and if any numbers 1000 or above are missing we will assume each of those lines forms its own conversation.
 
 
 
