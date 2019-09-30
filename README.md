@@ -150,7 +150,7 @@ Note:
 - There are no links where both values are less than 1000. In other words, the annotations specify what each message is a response to, starting from message 1,000.
 
 ### Baselines ###
-Baselines for some subtasks will be available soon.
+Baselines for subtask 1 and 4 are available [here](https://github.com/dstc8-track2/NOESIS-II/tree/baseline). 
 
 ### Evaluation ###
 
@@ -165,13 +165,60 @@ score over complete threads and several clustering metrics (Variation of Informa
 
 ### Submission ###
 
-Information regarding the submission will be released later in the development period.
+Your submissions should be emailed to `chulaka.gunasekara@ibm.com`, with the subject line `DSTC8_Track2_Submission`. The results should be submitted from an email address that is registered for Track 2.
+
+You need to submit a single zipped directory containing the result files for each of the subtasks that you need to be evaluated on. The files should be named in the following format. `<dataset>_subtask_<subtask_number>.json`
+
+The `<dataset>` should be replaced by either `Ubuntu` or `Advising`, and the `<subtask_number>` should be replaced by the subtask number(1-4). For example, the results file for subtask 1 on Ubuntu dataset should be named as `Ubuntu_subtask_1.json`
+
+Each results file for subtask 1 and 2 should follow the following json format.
+```
+[
+    {
+        "example-id": xxxxxxx,
+        "candidate-ranking":[
+            {
+                "candidate-id": aaaaaa,
+                "confidence": b.bbb
+            },
+            {
+                "candidate-id": cccccc,
+                "confidence": d.ddd
+            },
+            ...
+        ]
+    },
+    ...
+]
+```
+The value for the field `example-id` should contain the corresponding example-id of the test dataset. The candidate ranking field should ONLY include 100 candidates in the order of confidence.
+
+When the correct candidate is not available in the candidate set, return `"candidate-id": NONE` with the confidence score as an item in the candidate-ranking list.
+
+The results file for subtask 3 should follow the following format. 
+```
+[
+    {
+        "example-id": xxxxxxx,
+        "success-labels": [
+            {
+                "label": "label",
+                "position": N
+            }
+        ]
+     },
+     ...
+]
+```
+The value for the field `example-id` should contain the corresponding `example-id` of the test dataset. The `label` can be 'Accept', 'Reject', or 'No Decision Yet'. The `position` should be and integer which points to the utterance where the conversation is accepted or rejected. The If the value is 'No Decision Yet' then the position should be -1. 
+
+
 
 ### Tentative Timeline ###
 
 - Development Phase: Jun 17 - Sep 22, 2019 (14 weeks)
 - Evaluation Phase: Sep 23 - Oct 6, 2019 (2 weeks)
-- Objective Evaluation: Oct 7 - Oct 20, 2019
+- Announcement of the results: Oct 20, 2019
 - Paper Submission: TBA
 - DSTC8 Workshop: TBA
 
