@@ -217,7 +217,9 @@ The value for the field `example-id` should contain the corresponding `example-i
 ### Tentative Timeline ###
 
 - Development Phase: Jun 17 - Sep 22, 2019 (14 weeks)
+- Test data out on: Sep 23, 2019
 - Evaluation Phase: Sep 23 - Oct 6, 2019 (2 weeks)
+- Submission deadline: Oct 6, 2019
 - Announcement of the results: Oct 20, 2019
 - Paper Submission: TBA
 - DSTC8 Workshop: TBA
