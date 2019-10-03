@@ -193,7 +193,7 @@ Each results file for subtask 1 and 2 should follow the following json format.
 ```
 The value for the field `example-id` should contain the corresponding example-id of the test dataset. The candidate ranking field should ONLY include 100 candidates in the order of confidence.
 
-When the correct candidate is not available in the candidate set, return `"candidate-id": NONE` with the confidence score as an item in the candidate-ranking list.
+When the correct candidate is not available in the candidate set, return `"candidate-id": "NONE"` with the confidence score as an item in the candidate-ranking list.
 
 The results file for subtask 3 should follow the following format. 
 ```
