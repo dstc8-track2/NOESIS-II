@@ -43,9 +43,11 @@ We are considered several subtasks that have similar structure, but vary in the 
 
 
 ### Data ###
-The dataset will be available to the contestants upon registration through the following link and selecting *NOESIS II: Predicting Responses* as an interested track. 
+The datasets are available from the following links. 
 
-https://forms.gle/Zj1MDMyq3RVc5vWk7 
+- Training and dev data - [http://ibm.biz/dstc8_track2_data](http://ibm.biz/dstc8_track2_data)
+- Test data - [http://ibm.biz/dstc8_track2_test_data](http://ibm.biz/dstc8_track2_test_data)
+- Ground truth of the test data - [http://ibm.biz/dstc8_test_ground_truth](http://ibm.biz/dstc8_test_ground_truth)
 
 In addition to the training and validation dialog datasets, and extra dataset which includes paraphrases for utterances in advising dataset is also provided. 
 
@@ -54,8 +56,6 @@ The contestants are expected to train their models in a way that during testing 
 
 Additional external information which will be important for dialog modeling will be provided. For Ubuntu dataset, this external information comes in the form of Linux manual pages and Ubuntu discussion forums and for Advising dataset, extra information about courses will be given. 
 The contestants can use the provided knowledge sources as is, or transform them to appropriate representations (e.g. knowledge graphs, continuous embeddings, etc.) that can be integrated with end-to-end dialog systems to improve accuracy.
-
-**All the datasets will be publicly available after the competition.**
 
 ### Data format ####
 
